@@ -1,5 +1,71 @@
-<%- include ./partials/header.ejs %>
-<%- include ./partials/main_nav.ejs %>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %> page</p>
+<%- include ./partials/header.ejs %> <%- include ./partials/main_nav.ejs %>
+
+<!-- large container to manage the placements of both sections below -->
+<div class="min-vh-100 w-100 d-flex justify-content-center text-center align-items-center">
+  <div class="row align-items-center w-100 container-lg">
+    <!-- Text & button on the left are in this div class -->
+    <div class="col-md-7 mb-3">
+      <div class="p-4 border rounded shadow-sm bg-white">
+        <!-- box for the welcome bit-->
+        <p class="display-3 fs-1 mb-4">WELCOME TO THE DIET TRACKER</p>
+        <p>
+          Want to maintain a healthy life style? Make sure you eat healthy! Start logging your diet
+          and stay ahead!
+        </p>
+        <!-- underneath the text there is two cards, each linked to other pages to easy navigation -->
+        <div class="row mt-4 g-3 justify-content-center">
+          <!-- card created to redirect people into logging data -->
+          <div class="col-md-6">
+            <!--makign sure everything is centred also responsive -->
+            <div class="card shadow-sm h-100 text-center">
+              <img
+                class="mx-auto d-block mt-3 rounded-3 border border-success"
+                src="/Asset/Images/AddMeal.png"
+                alt="Meal Photo"
+                style="width: 275px; height: auto" />
+              <!--text belwo img-->
+              <div class="card-body">
+                <h5 class="card-title">Add a Meal!</h5>
+                <p class="card-text">
+                  It's quick and easy! Log your breakfast, lunch, dinner, snacks — all in one place.
+                </p>
+                <!--link to the meal add page to user cna log data-->
+                <a href="/meals/add" class="btn btn-outline-success">Start Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- second card containing contact inforamtio, exact samae as the card above -->
+          <div class="col-md-6">
+            <div class="card shadow-sm h-100 text-center">
+              <img
+                class="mx-auto d-block mt-3 rounded-3 border border-success"
+                src="/Asset/Images/ContactMeal.png"
+                alt="Meal Photo"
+                style="width: 275px; height: auto" />
+              <div class="card-body">
+                <h5 class="card-title">Contact Us!</h5>
+                <p class="card-text">
+                  Got any questions? Feel here to reach out below! We'd love to help!
+                </p>
+                <!-- link to the contact page-->
+                <a href="/contact" class="btn btn-outline-success">Reach us here!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Image on the left end-->
+    <div class="col-md-5 text-center">
+      <!-- large imag, matching the size of the text on the left-->
+      <img
+        src="\Asset\images\DietMeal.png"
+        class="img-fluid rounded-3 shadow border border-3 border-success"
+        alt="Meal Photo"
+        style="max-height: 600px" />
+    </div>
+  </div>
+</div>
 <%- include ./partials/footer.ejs %>
