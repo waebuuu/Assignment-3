@@ -1,0 +1,51 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<!--Main content-->
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1><%= title %></h1>
+            <table class="table table-bordered table-striped table-hover">
+                <!--Header Row-->
+                <tr class="d-flex">
+                    <th class="text-center col-2">Meal</th>
+                    <th class="col-3">Description</th>
+                    <th class="text-center col-1">Portion</th>
+                    <th class="text-center col-1">Calories</th>
+                    <th class="text-center col-1">Protein</th>
+                    <th class="text-center col-1">Carbs</th>
+                    <th class="text-center col-1">Fats</th>
+                    <th class="col-2 text-center"> <a href="/Meals/add" class="btn btn-primary d-inline-block align-self-start" role="button"> <i class="fas fa-plus-circle"></i> Log Meal </a></th>
+                </tr>
+                <% for(let count=0; count<MealList.length;count++) { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-2"><%= MealList[count].meal %></td>
+                        <td class="col-3"><%= MealList[count].description %></td>
+                        <td class="text-center col-1"><%= MealList[count].portion %></td>
+                        <td class="text-center col-1"><%= MealList[count].cals %></td>
+                        <td class="text-center col-1"><%= MealList[count].protein %></td>
+                        <td class="text-center col-1"><%= MealList[count].carbs %></td>
+                        <td class="text-center col-1"><%= MealList[count].fats %></td>
+
+                        <td class="text-center col-1">
+                            <a href="/meals/edit/<%= MealList[count]._id %>" 
+                                class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit
+                            </a>
+                        </td>
+
+                        <td class="text-center col-1">
+                            <a href="/meals/delete/<%= MealList[count]._id %>" class="btn btn-danger btn-sm" onclick="
+                                return confirm('Are you sure you want to delete this meal?');"> <i class="fas fa-trash-alt"></i> Delete 
+                            </a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</main>
+<br>
+<br>
+<%- include ../partials/footer.ejs %>
