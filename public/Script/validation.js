@@ -1,3 +1,4 @@
+//validation for the form
 (() => {
   "use strict";
 

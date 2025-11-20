@@ -1,5 +1,8 @@
 <%- include ../partials/header.ejs %> <%- include ../partials/main_nav.ejs %>
 
+<!--U in CRUD-->
+<!--layout very similar to add.js-->
+<!--container to hold form-->
 <main class="container my-5">
   <div class="container">
     <div class="row">
@@ -7,6 +10,7 @@
         <div class="card shadow-lg p-4 bg-white">
           <h1><%= title %></h1>
           <form class="form" method="post">
+            <!--change meal type-->
             <div class="form-group">
               <label for="mealTextField">Meal Type</label>
               <input
@@ -19,6 +23,7 @@
                 required />
             </div>
 
+            <!--change description, textarea to allow the textbox size to change-->
             <div class="form-group">
               <label for="descriptionTextField">Meal Description</label>
               <textarea
@@ -32,6 +37,7 @@
               >
             </div>
 
+            <!--change protion size-->
             <div class="form-group">
               <label for="portionTextField">Portion Size</label>
               <input
@@ -44,6 +50,7 @@
                 required />
             </div>
 
+            <!--change the nummber of cals-->
             <div class="form-group">
               <label for="calsTextArea">Calories</label>
               <input
@@ -55,6 +62,7 @@
                 required />
             </div>
 
+            <!--change the amount of protein-->
             <div class="form-group">
               <label for="proteinTextField">Protein</label>
               <input
@@ -67,6 +75,7 @@
                 required />
             </div>
 
+            <!--change the number of carbs-->
             <div class="form-group">
               <label for="carbsTextField">Carbohydrates</label>
               <input
@@ -79,6 +88,7 @@
                 required />
             </div>
 
+            <!--chnage the amount of fats-->
             <div class="form-group">
               <label for="fatsTextField">Fats</label>
               <input
@@ -91,6 +101,7 @@
                 required />
             </div>
             <br />
+            <!--buttons, one used to submit the changes and one used to cancel/undo changes-->
             <button class="btn btn-success" type="submit">
               <i class="fas fa-edit"></i> Submit
             </button>

@@ -1,5 +1,6 @@
 <%- include ./partials/header.ejs %> <%- include ./partials/main_nav.ejs %>
 
+<!--card holding the image and text at the top of the page, paddding on the bottom and top to make the site more clear and the background full-->
 <div
   class="d-flex justify-content-center align-items-center"
   style="padding-top: 40px; padding-bottom: 20px">
@@ -14,6 +15,7 @@
         </div>
       </div>
 
+      <!--text next to the image-->
       <div class="col-md-7">
         <div class="card-body">
           <h2 class="card-title mb-3"><%= title %></h2>
@@ -28,10 +30,13 @@
     </div>
   </div>
 </div>
-<main class="container my-5" style="">
+
+<!--container below the image and text, showcasing three points our website provides-->
+<main class="container my-5">
   <div class="container text-center my-4" style=" padding-bottom: 40px">
     <div class="card shadow-lg p-4 bg-white">
-    <h2>What we can do for you</h2>
+        <!-- 3 boxes next to each other divided by borders-->
+    <h2>What we offer</h2>
     <br />
     <div class="row">
       <!-- Box 1 -->
