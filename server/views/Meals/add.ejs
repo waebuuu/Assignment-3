@@ -1,68 +1,93 @@
-<%- include ../partials/header.ejs %>
-<%- include ../partials/main_nav.ejs %>
-<div class="container">
+<%- include ../partials/header.ejs %> <%- include ../partials/main_nav.ejs %>
+<main class="container my-5">
+  <div class="container">
     <div class="row">
-        <div class="offset-md-3 col-md-6">
-            <h1><%= title %></h1>
-            <form class="form" method="post">
-                <div class="form-group">
-                    <label for="type">Meal Type</label>
-                    <input type="text" class="form-control"
-                    id="typeTextField"
-                    placeholder="Enter the meal type"
-                    name="meal" required>
-                </div>
-                <div class="form-group">
-                    <label for="description">Meal Description</label>
-                    <input type="text" class="form-control"
-                    id="descriptionTextArea"
-                    placeholder="Enter description of meal"
-                    name="description" required>
-                </div>
-                <div class="form-group">
-                    <label for="sizeTextField">Portion Size</label>
-                    <input type="text" class="form-control"
-                    id="sizeTextField"
-                    placeholder="Enter portion size"
-                    name="portion" required>
-                </div>
-                <div class="form-group">
-                    <label for="calsTextArea">Calories</label>
-                    <textarea type="text" class="form-control"
-                    id="calsTextField"
-                    placeholder="Number of Calories"
-                    name="cals" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="protienTextArea">Protien</label>
-                    <textarea type="text" class="form-control"
-                    id="proteinTextField"
-                    placeholder="Grams of Protein"
-                    name="protein" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="priceTextField">Carbohydrates</label>
-                    <input type="text" class="form-control"
-                    id="carbsTextField"
-                    placeholder="Number of carbs"
-                    name="carbs" required>
-                </div>
-                <div class="form-group">
-                    <label for="priceTextField">Fats</label>
-                    <input type="text" class="form-control"
-                    id="fatTextField"
-                    placeholder="Number of fats"
-                    name="fats" required>
-                </div>
-                <br>
-                <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-edit"></i> Submit
-                </button>
-                <a href="/meals" class="btn btn-warning">
-                    <i class="fas fa-undo"></i> Cancel
-                </a>
-            </form>
+      <div class="offset-md-3 col-md-6">
+        <div class="card shadow-lg p-4 bg-white">
+          <h1><%= title %></h1>
+          <form class="form" method="post">
+            <div class="form-group">
+              <label for="type">Meal Type</label>
+              <input
+                type="text"
+                class="form-control"
+                id="typeTextField"
+                placeholder="Enter the meal type (eg. Breakfast, Lunch, Dinner, Snack, Dessert)"
+                name="meal"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="description">Meal Description</label>
+              <input
+                type="text"
+                class="form-control"
+                id="descriptionTextField"
+                placeholder="Enter description of meal"
+                name="description"
+                required />
+            </div>
+
+            <div class="form-group">
+              <label for="sizeTextField">Portion Size</label>
+              <input
+                type="text"
+                class="form-control"
+                id="sizeTextField"
+                placeholder="Enter portion size"
+                name="portion"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="calsTextArea">Calories</label>
+              <input
+                type="text"
+                class="form-control"
+                id="calsTextField"
+                placeholder="Number of Calories"
+                name="cals"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="protienTextArea">Protein</label>
+              <input
+                type="text"
+                class="form-control"
+                id="proteinTextField"
+                placeholder="Grams of Protein"
+                name="protein"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="priceTextField">Carbohydrates</label>
+              <input
+                type="text"
+                class="form-control"
+                id="carbsTextField"
+                placeholder="Number of carbs"
+                name="carbs"
+                required />
+            </div>
+            <div class="form-group">
+              <label for="priceTextField">Fats</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fatTextField"
+                placeholder="Number of fats"
+                name="fats"
+                required />
+            </div>
+            <br />
+            <button class="btn btn-success" type="submit">
+              <i class="fas fa-edit"></i> Submit
+            </button>
+            <a href="/meals" class="btn btn-outline-warning">
+              <i class="fas fa-undo"></i> Cancel
+            </a>
+          </form>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+</main>
 <%- include ../partials/footer.ejs %>

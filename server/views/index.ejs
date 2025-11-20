@@ -1,7 +1,10 @@
 <%- include ./partials/header.ejs %> <%- include ./partials/main_nav.ejs %>
 
-<!-- large container to manage the placements of both sections below -->
-<div class="min-vh-100 w-100 d-flex justify-content-center text-center align-items-center">
+<!-- centreing the content in the middle of the page, making sure the page is logn enough for the bg gradient to show-->
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="min-height: 90vh; padding-top: 40px; padding-bottom: 40px">
+  <!-- large container to manage the placements of both sections below -->
   <div class="row align-items-center w-100 container-lg">
     <!-- Text & button on the left are in this div class -->
     <div class="col-md-7 mb-3">
@@ -66,6 +69,8 @@
         alt="Meal Photo"
         style="max-height: 600px" />
     </div>
+    <br /><br />
   </div>
 </div>
+
 <%- include ./partials/footer.ejs %>

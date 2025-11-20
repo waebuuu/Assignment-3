@@ -1,87 +1,105 @@
-<%- include ../partials/header.ejs %>
-<%- include ../partials/main_nav.ejs %>
-<div class="container">
+<%- include ../partials/header.ejs %> <%- include ../partials/main_nav.ejs %>
+
+<main class="container my-5">
+  <div class="container">
     <div class="row">
-        <div class="offset-md-3 col-md-6">
-            <h1><%= title %></h1>
-            <form class="form" method="post">
- <div class="form-group">
-                    <label for="mealTextField">Meal Type</label>
-                    <input type="text" class="form-control"
-                    id="mealTextField"
-                    placeholder="Enter the meal type"
-                    name="meal"
-                    value="<%= Meal.meal %>"
-                    required>
-                </div>
+      <div class="offset-md-3 col-md-6">
+        <div class="card shadow-lg p-4 bg-white">
+          <h1><%= title %></h1>
+          <form class="form" method="post">
+            <div class="form-group">
+              <label for="mealTextField">Meal Type</label>
+              <input
+                type="text"
+                class="form-control"
+                id="mealTextField"
+                placeholder="Enter the meal type"
+                name="meal"
+                value="<%= Meal.meal %>"
+                required />
+            </div>
 
-                <div class="form-group">
-                    <label for="descriptionTextField">Meal Description</label>
-                    <input type="text" class="form-control"
-                    id="descriptionTextField"
-                    placeholder="Enter meal description"
-                    name="description"
-                    value="<%= Meal.description %>"
-                    required>
-                </div>
+            <div class="form-group">
+              <label for="descriptionTextField">Meal Description</label>
+              <textarea
+                type="text"
+                class="form-control"
+                id="descriptionTextArea"
+                placeholder="Enter meal description"
+                name="description"
+                required>
+<%= Meal.description %></textarea
+              >
+            </div>
 
-                <div class="form-group">
-                    <label for="portionTextField">Portion Size</label>
-                    <input type="text" class="form-control"
-                    id="portionTextField"
-                    placeholder="Enter portion size"
-                    name="portion"
-                    value="<%= Meal.portion %>"
-                    required>
-                </div>
+            <div class="form-group">
+              <label for="portionTextField">Portion Size</label>
+              <input
+                type="text"
+                class="form-control"
+                id="portionTextField"
+                placeholder="Enter portion size"
+                name="portion"
+                value="<%= Meal.portion %>"
+                required />
+            </div>
 
-                <div class="form-group">
-                    <label for="calsTextArea">Calories</label>
-                    <textarea class="form-control"
-                    id="calsTextArea"
-                    placeholder="Number of calories"
-                    name="cals"
-                    required><%= Meal.cals %></textarea>
-                </div>
+            <div class="form-group">
+              <label for="calsTextArea">Calories</label>
+              <input
+                class="form-control"
+                id="calsTextArea"
+                placeholder="Number of calories"
+                name="cals"
+                required />
+            </div>
 
-                <div class="form-group">
-                    <label for="proteinTextField">Protein</label>
-                    <input type="text" class="form-control"
-                    id="proteinTextField"
-                    placeholder="Amount of protein"
-                    name="protein"
-                    value="<%= Meal.protein %>"
-                    required>
-                </div>
+            <div class="form-group">
+              <label for="proteinTextField">Protein</label>
+              <input
+                type="text"
+                class="form-control"
+                id="proteinTextField"
+                placeholder="Amount of protein"
+                name="protein"
+                value="<%= Meal.protein %>"
+                required />
+            </div>
 
-                <div class="form-group">
-                    <label for="carbsTextField">Carbohydrates</label>
-                    <input type="text" class="form-control"
-                    id="carbsTextField"
-                    placeholder="Number of carbs"
-                    name="carbs"
-                    value="<%= Meal.carbs %>"
-                    required>
-                </div>
+            <div class="form-group">
+              <label for="carbsTextField">Carbohydrates</label>
+              <input
+                type="text"
+                class="form-control"
+                id="carbsTextField"
+                placeholder="Number of carbs"
+                name="carbs"
+                value="<%= Meal.carbs %>"
+                required />
+            </div>
 
-                <div class="form-group">
-                    <label for="fatsTextField">Fats</label>
-                    <input type="text" class="form-control"
-                    id="fatsTextField"
-                    placeholder="Number of fats"
-                    name="fats"
-                    value="<%= Meal.fats %>"
-                    required>
-                </div>
-                <br>
-                <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-edit"></i> Submit
-                </button>
-                <a href="/meals" class="btn btn-warning">
-                    <i class="fas fa-undo"></i> Cancel
-                </a>
-            </form>
+            <div class="form-group">
+              <label for="fatsTextField">Fats</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fatsTextField"
+                placeholder="Number of fats"
+                name="fats"
+                value="<%= Meal.fats %>"
+                required />
+            </div>
+            <br />
+            <button class="btn btn-success" type="submit">
+              <i class="fas fa-edit"></i> Submit
+            </button>
+            <a href="/meals" class="btn btn-outline-warning">
+              <i class="fas fa-undo"></i> Cancel
+            </a>
+          </form>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+</main>
 <%- include ../partials/footer.ejs %>
